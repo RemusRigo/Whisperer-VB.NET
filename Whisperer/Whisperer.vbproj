@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+   <PropertyGroup>
+      <AssemblyName>Whisperer</AssemblyName>
+      <MyType>WindowsForms</MyType>
+      <OutputType>WinExe</OutputType>
+      <StartupObject>Sub Main</StartupObject>
+      <TargetFramework>net10.0-windows</TargetFramework>
+      <UseWindowsForms>true</UseWindowsForms>
+      <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath> <!-- remove framework from output path -->    
+      <SolutionDir Condition=" '$(SolutionDir)' == '' ">..\</SolutionDir> <!-- binary output in parent folder -->
+      <BaseIntermediateOutputPath>$(SolutionDir)\obj\</BaseIntermediateOutputPath> <!-- obj output in parent folder -->
+   </PropertyGroup>
+
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+       <OutputPath>$(SolutionDir)\bin\Debug</OutputPath>
+   </PropertyGroup>
+
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+       <OutputPath>$(SolutionDir)\bin\Release</OutputPath>
+   </PropertyGroup>
+
+   <ItemGroup>
+      <Import Include="System.Data" />
+      <Import Include="System.Drawing" />
+      <Import Include="System.Windows.Forms" />
+   </ItemGroup>
+
+   <ItemGroup>
+      <ProjectReference Include="..\libUtilities\libUtilities.vbproj" />
+      <ProjectReference Include="..\libSW\libSW.vbproj" />
+      <ProjectReference Include="..\libVM\libVM.vbproj" />
+      <ProjectReference Include="..\libWindows\libWindows.vbproj" />
+   </ItemGroup>
+
+   <ItemGroup>
+      <Compile Update="My Project\Application.Designer.vb">
+         <DesignTime>True</DesignTime>
+         <AutoGen>True</AutoGen>
+         <DependentUpon>Application.myapp</DependentUpon>
+      </Compile>
+      <Compile Update="My Project\Resources.Designer.vb">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Resources.resx</DependentUpon>
+      </Compile>
+   </ItemGroup>
+
+   <ItemGroup>
+     <EmbeddedResource Update="My Project\Resources.resx">
+       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+     </EmbeddedResource>
+   </ItemGroup>
+
+   <ItemGroup>
+      <None Update="My Project\Application.myapp">
+         <Generator>MyApplicationCodeGenerator</Generator>
+         <LastGenOutput>Application.Designer.vb</LastGenOutput>
+      </None>
+   </ItemGroup>
+
+</Project>

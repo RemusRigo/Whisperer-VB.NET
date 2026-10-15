@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="frmAI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmRegion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmStartMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmTaskBar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmTheme.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

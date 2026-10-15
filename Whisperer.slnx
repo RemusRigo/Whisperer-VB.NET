@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="FUNDING.yml" />
+    <File Path="LICENSE.txt" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="libSW/libSW.vbproj" Id="31a711c8-79ba-4f12-b251-b9834060b8cc" />
+  <Project Path="libUtilities/libUtilities.vbproj" Id="5b46bb8e-1566-43fa-ab6f-33891530a8ff" />
+  <Project Path="libVM/libVM.vbproj" Id="bf6f0f8b-7266-47d8-aebf-e560c80ef590" />
+  <Project Path="libWindows/libWindows.vbproj" Id="6d13a4fd-2a1c-479b-b6fb-e68348dcd9b3" />
+  <Project Path="Whisperer/Whisperer.vbproj" />
+</Solution>

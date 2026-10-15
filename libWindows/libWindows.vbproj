@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>libWindows</RootNamespace>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportedNamespaces>libUtilities=False,System.Data=False,System.Drawing=False,System.Windows.Forms=False,Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,libWindows=True</ImportedNamespaces>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+   <ItemGroup>
+      <ProjectReference Include="..\libUtilities\libUtilities.vbproj" />
+   </ItemGroup>
+
+</Project>
